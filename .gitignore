@@ -1,0 +1,19 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+# dependencies
+/node_modules
+
+# ignore logs
+logs
+*.log
+
+# Ignore built files
+dist
+
+# ignore test converage
+coverage
+
+# Environment varibles
+*.env
+*.env.*
+
+**/node_modules

@@ -1,0 +1,6 @@
+{
+  "watch": ["src", "bin", "test", "scripts"],
+  "ext": ".ts,.js,.pug,.css",
+  "ignore": [],
+  "exec": "node --inspect=0.0.0.0:9229 --require ts-node/register ./src/index.ts"
+}

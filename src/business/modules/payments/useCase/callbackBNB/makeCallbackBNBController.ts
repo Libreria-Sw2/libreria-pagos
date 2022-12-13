@@ -29,15 +29,10 @@ export class MakeCallbackBnbController {
       let bnb = new BnbQrChannel(transactionRepo, payChannelRepo);
       var result = await bnb.callbackReceive(dto);
 
-      if (result.isLeft()) {
-        const error = result.value;
-        return new FailureMsgResponse(error.errorValue().message).send(res);
-      } else {
         return new SuccessResponse<makeCallbackResponseDTO>(
           'Datos recibidos:',
-          result.value.getValue().data,
+          result,
         ).send(res);
-      }
     } catch (err) {
       return new FailureMsgResponse(err.toString()).send(res);
     }

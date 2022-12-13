@@ -65,7 +65,7 @@ export class BnbQrChannel implements IPayChannelService {
 
     console.log('response.data :>> ', response.data);
     if (response.data) {
-      return response.data.data;
+      return response.data;
     }
   }
 
